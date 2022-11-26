@@ -137,8 +137,10 @@ function buildCharts(sample) {
         title: {text: "Belly Button Washing Frequency"},
         type: "indicator",
         mode: "gauge+number",
+        gauge:
+        {
         axis: {range:[null,10], tickwidth: 1, tickcolor: "black"},
-        bar: {color: "darkblue"},
+        bar: {color: "black"},
         steps: [
           {range: [0,2], color: "red"},
           {range: [2,4], color: "orange"},
@@ -147,7 +149,8 @@ function buildCharts(sample) {
           {range: [8,10], color: "green"}
         ]
       }
-    ];
+    }
+  ];
         
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
