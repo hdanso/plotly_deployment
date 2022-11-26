@@ -53,8 +53,6 @@ function buildMetadata(sample) {
   });
 }
 
-// BAR CHART 
-
 // 1. Create the buildCharts function.
 function buildCharts(sample) {
   // 2. Use d3.json to load and retrieve the samples.json file 
@@ -65,7 +63,7 @@ function buildCharts(sample) {
     var inputArray = sampleArray.filter(sampleObj => sampleObj.id == sample);
     console.log(inputArray)
     // 1. Create a variable that filters the metadata array for the object with the desired sample number.
-    var filteredMetadata = metadata.filter(metaObj => metaObj.id == sample);
+    var filteredMetadata = data.metadata.filter(metaObj => metaObj.id == sample);
     console.log(filteredMetadata)
     //  5. Create a variable that holds the first sample in the array.
     var firstSample = inputArray[0];
@@ -80,6 +78,7 @@ function buildCharts(sample) {
    // 3. Create a variable that holds the washing frequency.
    var washFreq = firstMetaSample.wfreq
 
+   // BAR CHART 
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last. 
